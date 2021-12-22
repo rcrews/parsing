@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby -w
+# frozen_string_literal: true
 
-Parsing::parsing.rb
+Parsing.parsing.rb
