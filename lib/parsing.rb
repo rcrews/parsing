@@ -17,20 +17,20 @@ module Parsing
   XML_DATA = 'https://raw.githubusercontent.com/rcrews/parsing/main/data/cdev.xml'
   YAML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.yml'
 
-  # people = People.new
+  people = People.new
 
-  # j = Json.new
-  # j.get
-  # j.people.each { |i| people.add(i) }
+  j = Json.new
+  j.get
+  j.people.each { |i| people.add(i) }
 
-  # y = Yaml.new
-  # y.get
-  # y.people.each { |i| people.add(i) }
+  y = Yaml.new
+  y.get
+  y.people.each { |i| people.add(i) }
 
   x = Xml.new
   x.get
-  # x.people.each { |i| people.add(i) }
-  x.people.each { |i| p i }
+  x.people.each { |i| people.add(i) }
+  # x.people.each { |i| p i }
 
-  # people.each { |i| p i }
+  people.sort.each { |i| p i }
 end
