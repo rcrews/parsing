@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'nokogiri'
+
 module Parsing
-  VERSION = '0.1.0'
 end

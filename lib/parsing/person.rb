@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
 module Parsing
-  VERSION = '0.1.0'
+  Person = Struct.new(:first_name, :last_name, :country, :title,
+                      :manager, keyword_init: true) do
+  end
 end
