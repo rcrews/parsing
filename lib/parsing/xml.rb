@@ -14,7 +14,6 @@ module Parsing
     def get
       doc = Nokogiri::XML(URI(XML_DATA).read)
       doc.css('direct').each do |d|
-        if Fix.name(d.text)['first']
         person = Parsing::Person.new(
           first_name: Fix.name(d.text)['first'],
           last_name: Fix.name(d.text)['last'],

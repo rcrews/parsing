@@ -3,6 +3,7 @@
 module Fix
   def self.name(name)
     name = name.delete_suffix(' [C]') # Remove contractor notation
+    name = name.gsub(/\s+/, ' ').strip # normalize spaces
     name = hungarian(name)
     /\A(?<first>\S+)\s+(?<last>.*)\z/.match(name)
   end
@@ -21,14 +22,4 @@ module Fix
     name = 'Ildiko Feher' if name == 'Feher Ildiko'
     name
   end
-
-  # TODO: Fix missing managers
-  # def self.manager(direct)
-  #   manager = 'Mitra Mohsenian' if direct == 'Sarah Olson' ||
-  #                                  direct == 'Thiriguna Rao' ||
-  #                                  direct == 'Ildiko Feher'
-  #   manager = 'Paul Codding' if direct == 'Mitra Mohsenian'
-  #   manager
-  # end
-
 end
