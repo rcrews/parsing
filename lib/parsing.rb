@@ -10,11 +10,21 @@ require_relative 'parsing/version'
 require_relative 'parsing/xml'
 require_relative 'parsing/yaml'
 
+# Primary namespace for the parsing application
 module Parsing
+  # URL of CSV data: Specialities
   CSV_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.csv'
+
+  # URL of HTML data: none
   HTML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.html'
+
+  # URL of JSON data: Titles
   JSON_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.json'
+
+  # URL of XML data: Managers
   XML_DATA = 'https://raw.githubusercontent.com/rcrews/parsing/main/data/cdev.xml'
+
+  # URL of YAML data: Locations, especially coutries
   YAML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.yml'
 
   people = People.new

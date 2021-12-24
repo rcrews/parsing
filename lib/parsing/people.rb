@@ -3,6 +3,9 @@
 require 'set'
 
 module Parsing
+  # Structure for collecting person data
+  # @author  Robert Crews <rcrews@cloudera.com>
+  # @since   0.1.0
   class People < Set
     def get(first_name, last_name)
       each do |i|
