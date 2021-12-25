@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'open-uri'
-require 'psych'
+require 'open-uri' # open-uri is a gem
+require 'psych' # psych is a gem
 
 module Parsing
   # Process YAML for location data, especially countries

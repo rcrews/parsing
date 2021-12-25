@@ -11,16 +11,16 @@ module Parsing
       each do |i|
         return i if i.first_name == first_name && i.last_name == last_name
       end
-      nil
+      nil # return nil if no match is found
     end
 
-    def add(person)
-      existing = get(person[:first_name], person[:last_name])
-      if existing
-        person.members.each { |m| existing[m] = person[m] if person[m] }
-      else
-        super(person)
-      end
-    end
-  end
-end
+    def add(person) # function definition
+      existing = get(person[:first_name], person[:last_name]) # get existing person
+      if existing # if existing
+        person.members.each { |m| existing[m] = person[m] if person[m] } # update existing
+      else # if not existing
+        super(person) # add new person
+      end 
+    end # end of add function
+  end # end of class People
+end # end of module Parsing
