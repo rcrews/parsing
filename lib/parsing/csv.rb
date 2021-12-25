@@ -18,9 +18,22 @@ module Parsing
     def get
       # TODO: Parse CSV, create person, add to people
       # CSV loop {
-      #   person = Person.new()
-      #   @people.add(person)
+      CSV.foreach(CSV_DATA) do |row|
+        #   person = Person.new()
+        person = Person.new(
+          first_name: row[0],
+          last_name: row[1],
+          title: row[2],
+          Specialities: row[3]
+        )
+        #   @people.add(person)
+        @people.add(person)
+      end
       # }
+      
+      
+      
+      
     end
   end
 end
