@@ -14,13 +14,14 @@ module Parsing
       nil # return nil if no match is found
     end
 
-    def add(person) # function definition
+    # function definition
+    def add(person)
       existing = get(person[:first_name], person[:last_name]) # get existing person
       if existing # if existing
         person.members.each { |m| existing[m] = person[m] if person[m] } # update existing
       else # if not existing
         super(person) # add new person
-      end 
-    end # end of add function
-  end # end of class People
-end # end of module Parsing
+      end
+    end
+  end
+end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# require_relative 'parsing/csv'
+require_relative 'parsing/csv'
 require_relative 'parsing/fix'
 # require_relative 'parsing/html'
 require_relative 'parsing/json'
@@ -28,6 +28,10 @@ module Parsing
   YAML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.yml'
 
   people = People.new
+
+  c = Csv.new
+  c.get
+  c.people.each { |i| people.add(i) }
 
   j = Json.new
   j.get

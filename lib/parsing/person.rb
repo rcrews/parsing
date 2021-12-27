@@ -6,7 +6,7 @@ module Parsing
   # @author  Robert Crews <rcrews@cloudera.com>
   # @since   0.1.0
   Person = Struct.new(:first_name, :last_name, :country, :title,
-                      :manager, :Specialities : keyword_init: true) do
+                      :manager, :specialities, keyword_init: true) do
     include Comparable
 
     def <=>(other)
