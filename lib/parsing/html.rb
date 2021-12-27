@@ -14,13 +14,14 @@ module Parsing
       @people = People.new
     end
 
-    # Parse HTML and load local People struct with info
     def get
-      # TODO: Parse HTML, create person, add to people
-      # HTML loop {
-      #   person = Person.new()
-      #   @people.add(person)
-      # }
+      Nokogiri::HTML(URI(HTML_DATA).read).css('tr').each do |row|
+        person = Person.new(
+          first_name: row.css('td')[0].text,
+          last_name: row.css('td')[1].text
+        )
+        @people.add(person)
+      end
     end
   end
 end
