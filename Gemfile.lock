@@ -14,12 +14,9 @@ GEM
     jruby-rack (1.1.21)
     nokogiri (1.12.5-java)
       racc (~> 1.4)
-    nokogiri (1.12.5-x86_64-linux)
-      racc (~> 1.4)
     parallel (1.21.0)
     parser (3.0.3.2)
       ast (~> 2.4.1)
-    racc (1.6.0)
     racc (1.6.0-java)
     rainbow (3.0.0)
     rake (13.0.6)
@@ -76,9 +73,9 @@ DEPENDENCIES
   bundler
   coderay
   parsing!
-  rake (~> 13.0)
-  rspec (~> 3.0)
-  rubocop (~> 1.21)
+  rake
+  rspec
+  rubocop
   rubocop-performance
   rubocop-rake
   rubocop-rspec
