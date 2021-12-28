@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
+require 'erb'
 require_relative 'parsing/csv'
 require_relative 'parsing/fix'
-# require_relative 'parsing/html'
+require_relative 'parsing/html'
 require_relative 'parsing/json'
 require_relative 'parsing/people'
 require_relative 'parsing/person'
@@ -27,7 +28,15 @@ module Parsing
   # URL of YAML data: Locations, especially coutries
   YAML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.yml'
 
+  HTML_TEMPLATE = File.expand_path('../views/html.erb', __dir__)
+  
+  TEXT_TEMPLATE = File.expand_path('../views/text.erb', __dir__)
+
   people = People.new
+
+  h = Html.new
+  h.get
+  h.people.each { |i| people.add(i) }
 
   c = Csv.new
   c.get
@@ -45,5 +54,7 @@ module Parsing
   x.get
   x.people.each { |i| people.add(i) }
 
-  people.sort.each { |i| p i }
+  puts ERB.new(File.read(HTML_TEMPLATE)).result(binding)
+
+  #people.sort.each { |i| p i }
 end
