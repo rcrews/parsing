@@ -39,9 +39,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-performance'
   spec.add_development_dependency 'rubocop-rake'
   spec.add_development_dependency 'rubocop-rspec'
+  spec.add_development_dependency 'warbler'
   spec.add_development_dependency 'yard'
 
-  spec.add_dependency 'nokogiri', '~> 1.12'
+  spec.add_runtime_dependency 'nokogiri', '~> 1.12'
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
