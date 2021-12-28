@@ -39,7 +39,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-performance'
   spec.add_development_dependency 'rubocop-rake'
   spec.add_development_dependency 'rubocop-rspec'
-  spec.add_development_dependency 'warbler'
   spec.add_development_dependency 'yard'
 
   spec.add_dependency 'nokogiri', '~> 1.12'
