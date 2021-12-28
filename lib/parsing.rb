@@ -16,13 +16,13 @@ module Parsing
   CSV_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.csv'
 
   # URL of HTML data: none
-  HTML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.html'
+  HTML_DATA = 'https://raw.githubusercontent.com/rcrews/parsing/main/data/cdev.html'
 
   # URL of JSON data: Titles
   JSON_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.json'
 
   # URL of XML data: Managers
-  XML_DATA = 'https://raw.githubusercontent.com/rcrews/parsing/main/data/cdev.xml'
+  XML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.xml'
 
   # URL of YAML data: Locations, especially coutries
   YAML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.yml'
@@ -44,7 +44,6 @@ module Parsing
   x = Xml.new
   x.get
   x.people.each { |i| people.add(i) }
-  # x.people.each { |i| p i }
 
   people.sort.each { |i| p i }
 end
