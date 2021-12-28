@@ -17,7 +17,7 @@ module Parsing
   CSV_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.csv'
 
   # URL of HTML data: none
-  HTML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.html'
+  HTML_DATA = 'https://raw.githubusercontent.com/rcrews/parsing/main/data/cdev.html'
 
   # URL of JSON data: Titles
   JSON_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.json'
