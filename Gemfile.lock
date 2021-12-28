@@ -21,6 +21,7 @@ GEM
     parallel (1.21.0)
     parser (3.0.3.2)
       ast (~> 2.4.1)
+    racc (1.6.0)
     racc (1.6.0-java)
     rainbow (3.0.0)
     rake (13.0.6)
