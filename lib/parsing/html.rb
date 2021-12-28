@@ -15,11 +15,11 @@ module Parsing
     end
 
     def get
-      doc = Nokogiri::HTML(URI(HTML_DATA).read)
-      doc.css('li').each do |li|
+      Nokogiri::HTML(URI(HTML_DATA).read).css('li').each do |li|
+        name = Fix.name(li.css('.name')[0].text)
         person = Person.new(
-          first_name: Fix.name(li.css('.name')[0].text)[:first],
-          last_name: Fix.name(li.css('.name')[0].text)[:last],
+          first_name: name[:first],
+          last_name: name[:last],
           note: li.css('.note')[0].text
         )
         @people.add(person)

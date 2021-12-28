@@ -17,7 +17,7 @@ module Parsing
   CSV_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.csv'
 
   # URL of HTML data: none
-  HTML_DATA = 'https://raw.githubusercontent.com/rcrews/parsing/main/data/cdev.html'
+  HTML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.html'
 
   # URL of JSON data: Titles
   JSON_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.json'
@@ -28,8 +28,10 @@ module Parsing
   # URL of YAML data: Locations, especially coutries
   YAML_DATA = 'https://raw.githubusercontent.com/SID262000/Test/main/data/cdev.yml'
 
+  # ERB template for HTML
   HTML_TEMPLATE = File.expand_path('../views/html.erb', __dir__)
-  
+
+  # ERB template for text
   TEXT_TEMPLATE = File.expand_path('../views/text.erb', __dir__)
 
   people = People.new
@@ -55,6 +57,4 @@ module Parsing
   x.people.each { |i| people.add(i) }
 
   puts ERB.new(File.read(HTML_TEMPLATE)).result(binding)
-
-  #people.sort.each { |i| p i }
 end
