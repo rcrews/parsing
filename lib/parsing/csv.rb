@@ -17,7 +17,7 @@ module Parsing
     # Parse JSON and load local People struct with info
     def get
       CSV.parse(URI(CSV_DATA).read, headers: true).each do |row|
-        name = Fix.name(li.css('.name')[0].text)
+        name = Fix.name(row['Name'])
         person = Person.new(
           first_name: name[:first],
           last_name: name[:last],

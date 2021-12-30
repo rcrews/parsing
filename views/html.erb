@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Member descriptions">
+<meta name="keywords" content="roles, notes, mnemonics">
+<link rel="stylesheet" href="style.css">
+<title>CDEV Team</title>
+</head>
+<body>
+<header></header>
+<main>
+<article>
+<h1>CDEV Team</h1>
+<p>Here are brief notes about our team members:</p>
+<ol>
+<% @people.sort.each do |i| %>
+<li><%= i.first_name %> <%= i.last_name %></li>
+<% end %>
+</ol>
+</article>
+</main>
+<footer></footer>
+<script src="script.js"></script>
+</body>
+</html>

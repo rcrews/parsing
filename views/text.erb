@@ -1,0 +1,10 @@
+<% @people.sort.each do |i| %>
+<%= i.first_name %> <%= i.last_name %>
+    Title: <%= i.title %>
+    Country: <%= i.country %>
+    Manager: <%= i.manager %>
+    Specialities: <%= i.specialities %>
+    Note: <%= i.note %>
+    
+<% end %>
+

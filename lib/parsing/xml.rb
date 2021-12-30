@@ -18,7 +18,7 @@ module Parsing
     # Parse XML and load local People struct with info
     def get
       Nokogiri::XML(URI(XML_DATA).read).css('direct').each do |d|
-        name = Fix.name(li.css('.name')[0].text)
+        name = Fix.name(d.text)
         person = Person.new(
           first_name: name[:first],
           last_name: name[:last],
