@@ -18,7 +18,7 @@ module Parsing
     # Parse JSON and load local People struct with info
     def get
       JSON.parse(URI(JSON_DATA).read, symbolize_names: true).each do |i|
-        name = Fix.name(li.css('.name')[0].text)
+        name = Fix.name(i[:name])
         person = Person.new(
           first_name: name[:first],
           last_name: name[:last],

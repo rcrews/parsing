@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'erb'
+require_relative 'parsing/cli'
 require_relative 'parsing/csv'
 require_relative 'parsing/fix'
 require_relative 'parsing/html'
@@ -34,27 +35,9 @@ module Parsing
   # ERB template for text
   TEXT_TEMPLATE = File.expand_path('../views/text.erb', __dir__)
 
-  people = People.new
+  VERSION_TEMPLATE = File.expand_path('../views/version.erb', __dir__)
 
-  h = Html.new
-  h.get
-  h.people.each { |i| people.add(i) }
+  HELP_TEMPLATE = File.expand_path('../views/help.erb', __dir__)
 
-  c = Csv.new
-  c.get
-  c.people.each { |i| people.add(i) }
-
-  j = Json.new
-  j.get
-  j.people.each { |i| people.add(i) }
-
-  y = Yaml.new
-  y.get
-  y.people.each { |i| people.add(i) }
-
-  x = Xml.new
-  x.get
-  x.people.each { |i| people.add(i) }
-
-  puts ERB.new(File.read(HTML_TEMPLATE)).result(binding)
+  Cli.new
 end

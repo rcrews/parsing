@@ -15,7 +15,7 @@
 <h1>CDEV Team</h1>
 <p>Here are brief notes about our team members:</p>
 <ol>
-<% people.sort.each do |i| %>
+<% @people.sort.each do |i| %>
 <li><%= i.first_name %> <%= i.last_name %></li>
 <% end %>
 </ol>
