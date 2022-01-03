@@ -9,3 +9,10 @@
 
 # rspec failure tracking
 .rspec_status
+
+# Test files
+/*.csv
+/*.html
+/*.json
+/*.yaml
+/*.yml
