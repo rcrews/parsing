@@ -29,8 +29,7 @@ module Parsing
       run
     end
 
-    # TODO:
-    # Check to see if str matches the allowed format
+    # TODO: Check to see if str matches the allowed format
     # If so, set @format
     # Be sure to allow for different letter cases
     # Be sure to allpw common different spellings:
@@ -74,9 +73,8 @@ module Parsing
       Psych.dump(yaml)
     end
 
-    # TODO:
+    # TODO: Check to see if the directory exists, create it if not
     # Set the @output file
-    # Check to see if the directory exists, create it if not
     # This might not be needed
     def output(str)
       @output = str
