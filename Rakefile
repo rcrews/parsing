@@ -6,7 +6,7 @@ require 'rubocop/rake_task'
 require 'warbler' if defined? JRUBY_VERSION
 require 'yard'
 
-task default: %i[spec rubocop]
+task default: %i[spec rubocop yard]
 
 RSpec::Core::RakeTask.new(:spec)
 
