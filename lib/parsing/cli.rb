@@ -6,12 +6,13 @@ require 'getoptlong'
 require 'json'
 require 'psych'
 require 'active_support/core_ext/hash/keys'
+require 'fileutils'
 
 module Parsing
   # Command-line interface
   # @author  Siddhant Kumar <siddhantkumar.xyz@gmail.com>
   # @since   0.1.0
-  class Cli
+  class Cli # rubocop:disable Metrics/ClassLength
     OPTIONS = [
       ['--help', '-h', GetoptLong::NO_ARGUMENT],
       ['--format', '-f', GetoptLong::REQUIRED_ARGUMENT],
@@ -21,13 +22,7 @@ module Parsing
 
     def initialize
       @people = People.new
-      @opts = GetoptLong.new(
-        ['--help', '-h', GetoptLong::NO_ARGUMENT],
-        ['--format', '-f', GetoptLong::REQUIRED_ARGUMENT],
-        ['--output', '-o', GetoptLong::REQUIRED_ARGUMENT],
-        ['--version', '-v', GetoptLong::NO_ARGUMENT]
-      )
-      # p @opts
+      @opts = GetoptLong.new(*OPTIONS)
       setup
       parse
       data_format(File.extname(@output).sub('.', '')) if @output
@@ -47,20 +42,22 @@ module Parsing
 
     def format_as_csv
       CSV.generate do |csv|
-        @people.each do |person|
-          csv << [person.first_name, person.last_name, person.title, person.specialities]
+        csv << %w[Name Country Title Specilities]
+        @people.sort.each do |person|
+          name = "#{person.first_name} #{person.last_name}"
+          csv << [name, person.country, person.title, person.specialities]
         end
       end
     end
 
     def format_as_html
-      ERB.new(File.read(HTML_TEMPLATE)).result(binding)
+      ERB.new(File.read(HTML_TEMPLATE), trim_mode: '<>').result(binding)
     end
 
     def format_as_json
       json = []
-      @people.to_a.each do |person|
-        json << person.to_h
+      @people.sort.to_a.each do |person|
+        json << Fix.full_name(person.to_h)
       end
       JSON.pretty_generate(json)
     end
@@ -71,8 +68,8 @@ module Parsing
 
     def format_as_yaml
       yaml = []
-      @people.to_a.each do |person|
-        yaml << person.to_h.stringify_keys
+      @people.sort.to_a.each do |person|
+        yaml << Fix.full_name(person.to_h).stringify_keys
       end
       Psych.dump(yaml)
     end
@@ -152,6 +149,7 @@ module Parsing
 
     def write_out(fdata)
       if @output
+        FileUtils.mkpath(File.dirname(@output)) unless File.directory?(File.dirname(@output))
         File.write(@output, fdata)
       else
         puts fdata

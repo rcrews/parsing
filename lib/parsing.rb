@@ -35,8 +35,10 @@ module Parsing
   # ERB template for text
   TEXT_TEMPLATE = File.expand_path('../views/text.erb', __dir__)
 
+  # ERB template for VERSION
   VERSION_TEMPLATE = File.expand_path('../views/version.erb', __dir__)
 
+  # ERB template for HELP
   HELP_TEMPLATE = File.expand_path('../views/help.erb', __dir__)
 
   Cli.new
