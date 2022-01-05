@@ -13,6 +13,11 @@ module Parsing
   # @author  Siddhant Kumar <siddhantkumar.xyz@gmail.com>
   # @since   0.1.0
   class Cli # rubocop:disable Metrics/ClassLength
+    FORMATS = {
+      txt: 'text',
+      yml: 'yaml'
+    }.freeze
+
     OPTIONS = [
       ['--help', '-h', GetoptLong::NO_ARGUMENT],
       ['--format', '-f', GetoptLong::REQUIRED_ARGUMENT],
@@ -29,20 +34,9 @@ module Parsing
       run
     end
 
-    # TODO: Check to see if str matches the allowed format
-    # If so, set @format
-    # Be sure to allow for different letter cases
-    # Be sure to allow common different spellings:
-    #   txt = text
-    #   yml = yaml
     def data_format(str)
       @format = str.downcase
-      case @format
-      when 'text'
-        @format = 'txt'
-      when 'yml'
-        @format = 'yaml'
-      end
+      FORMATS.each { |k, v| @format = v if @format == k.to_s }
     end
 
     def format_as_csv
