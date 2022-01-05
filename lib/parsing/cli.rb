@@ -32,11 +32,17 @@ module Parsing
     # TODO: Check to see if str matches the allowed format
     # If so, set @format
     # Be sure to allow for different letter cases
-    # Be sure to allpw common different spellings:
+    # Be sure to allow common different spellings:
     #   txt = text
     #   yml = yaml
     def data_format(str)
-      @format = str
+      @format = str.downcase
+      case @format
+      when 'text'
+        @format = 'txt'
+      when 'yml'
+        @format = 'yaml'
+      end
     end
 
     def format_as_csv
