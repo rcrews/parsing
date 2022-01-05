@@ -1,0 +1,254 @@
+
+Jankiram Balakrishnan
+    Title: Staff Technical Writer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: Operational Database
+    Note: newest writer
+
+Dominika Bialek
+    Title: Senior Staff Content Developer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Management Console
+    Note: Management Console
+
+Brian Burton
+    Title: Senior Content Developer
+    Country: US
+    Manager: Sarah Olson
+    Specialities: Data Engineering Spark
+    Note: lives in Utah
+
+Biplab Chakraborty
+    Title: Staff Technical Writer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: Phoenix HBase
+    Note: Operational Database
+
+Priyanka Chheda
+    Title: Staff Technical Writer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: Hue Navigator Optimizer
+    Note: Hue
+
+William Clemens
+    Title: Staff Technical Writer
+    Country: US
+    Manager: Sarah Olson
+    Specialities: CDSW CML
+    Note: knows a lot about Japan
+
+Robert Crews
+    Title: Principal Tools Engineer I, Content Development
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Programming DevOps
+    Note: docs website
+
+Jason Davis
+    Title: Principal Tools Engineer I, Content Development
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Programming DevOps
+    Note: DITA build system
+
+Sairam Dwarakanath Yalandur
+    Title: Senior Staff, Content Developer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: Management Console HDFS Ozone
+    Note: CDP Private Cloud Data Services
+
+Ildiko Feher
+    Title: Manager, Content Development
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Managing Data Viz
+    Note: manages our Hunagarian team
+
+Tamas Gombos
+    Title: Technical Writer
+    Country: Hungary
+    Manager: Ildiko Feher
+    Specialities: Data Viz
+    Note: Data Viz
+
+Kristine Hahn
+    Title: Senior Staff Technical Writer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Hive Praquet ORC Avro Druid Pig DAS Sqoop
+    Note: Data Warehousing team lead
+
+Michael Hovermale
+    Title: Senior Staff Content Developer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Ranger Sentry Spark KTS Navigator DSS
+    Note: SDX team lead
+
+David Hoyle
+    Title: Principal Content Developer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: CDP as a Service
+    Note: CDP as a Service
+
+Asha Kadam
+    Title: Technical Editor
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: Editing
+    Note: editor
+
+Liliana Kadar
+    Title: Senior Content Developer
+    Country: Hungary
+    Manager: Ildiko Feher
+    Specialities: Safari Kudu Accumulo ZooKeeper HBase
+    Note: HBase & Phoenix
+
+Miklos Kertesz
+    Title: Content Developer
+    Country: Hungary
+    Manager: Ildiko Feher
+    Specialities: Zepplin Spark Livy
+    Note: Search
+
+Matyas Lillin
+    Title: Senior Content Developer
+    Country: Hungary
+    Manager: Ildiko Feher
+    Specialities: Kafka SRM
+    Note: Kafka
+
+Divya M N
+    Title: Staff Technical Writer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: YARN Kubernetes Docker Oozie
+    Note: YARN & Oozie
+
+Dóra Marsal
+    Title: Senior Content Developer
+    Country: Hungary
+    Manager: Ildiko Feher
+    Specialities: Flink Cruise Control
+    Note: CSA
+
+Rita McKissick
+    Title: Senior Staff Content Developer
+    Country: US
+    Manager: Sarah Olson
+    Specialities: CDSW CML Metron Spot
+    Note: CDSW docs
+
+Vanessa Menzies-Flint
+    Title: Technical Writer Data Flow
+    Country: US
+    Manager: Sarah Olson
+    Specialities: CFM
+    Note: CFM docs
+
+Mitra Mohsenian
+    Title: VP, Content Development
+    Country: US
+    Manager: Paul Codding
+    Specialities: Managing
+    Note: primary leader
+
+Sarah Olson
+    Title: Content Developer Manager
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Managing NiFi NiFi Registry
+    Note: has resigned
+
+Jennifer Osburn
+    Title: Staff Content Developer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Data Hub Cloudbreak Altus Director
+    Note: Data Hub
+
+Lesley Palmer
+    Title: Staff Technical Writer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Workload Manager
+    Note: Workload Manager writer
+
+Pranay R
+    Title: Senior Technical Writer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: Installation Release Notes Ambari AM2CM
+    Note: installation documentation
+
+Thiriguna Rao
+    Title: Director, Content Development
+    Country: India
+    Manager: Mitra Mohsenian
+    Specialities: Managing HBase
+    Note: manages our Indian team
+
+Edward Rawlings
+    Title: Senior Staff Content Developer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Cloudera Manager
+    Note: Cloudera Manager
+
+Lavanya Subash
+    Title: Senior Technical Writer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: BDR Replication Manager DLM
+    Note: Replication Manager
+
+Srinivas Sudhindra
+    Title: Staff Content Developer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: DPP Data Catalog Atlas
+    Note: Atlas
+
+Arpita Talukder
+    Title: Senior Technical Writer
+    Country: India
+    Manager: Thiriguna Rao
+    Specialities: SMM MiNiFi
+    Note: SMM
+
+ShajiniRetna Thayasingh
+    Title: Technical Writer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Impala
+    Note: Impala writer
+
+Dóra Tóth-Major
+    Title: Visual Content Developer
+    Country: Hungary
+    Manager: Ildiko Feher
+    Specialities: Illustrating
+    Note: illustrator
+
+Diane Warner
+    Title: Staff Content Developer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: Ranger Sentry Spark KTS Navigator DSS Knox
+    Note: Knox
+
+Coral Waters
+    Title: Staff Content Developer
+    Country: US
+    Manager: Mitra Mohsenian
+    Specialities: -
+    Note: no current projects
+
+
