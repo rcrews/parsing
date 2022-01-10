@@ -123,9 +123,8 @@ module Parsing
       when 'csv' then write_out(format_as_csv)
       when 'html' then write_out(format_as_html)
       when 'json' then write_out(format_as_json)
-      when 'text' then write_out(format_as_text)
       when 'yaml' then write_out(format_as_yaml)
-      else raise 'invalid output format specified'
+      else write_out(format_as_text)
       end
     end
 
