@@ -28,6 +28,7 @@ module Parsing
     def initialize
       @people = People.new
       @opts = GetoptLong.new(*OPTIONS)
+      ARGV.clear
       setup
       parse
       data_format(File.extname(@output).sub('.', '')) if @output
