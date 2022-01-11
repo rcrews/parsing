@@ -6,7 +6,7 @@ require 'rubocop/rake_task'
 require 'warbler' if defined? JRUBY_VERSION
 require 'yard'
 
-task default: %i[spec rubocop yard]
+task default: %i[rubocop spec yard]
 
 RSpec::Core::RakeTask.new(:spec)
 
@@ -21,6 +21,7 @@ end
 
 YARD::Rake::YardocTask.new do |t|
   # t.files   = ['app/**/*.rb', 'lib/**/*.rb', '-', 'doc/FAQ.md', 'doc/Changes.md']
+  t.options = ['--fail-on-warning']
 end
 
 desc 'Make jar'
